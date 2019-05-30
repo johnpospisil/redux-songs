@@ -1,4 +1,6 @@
-const songReducer = () => {
+import { combineReducers } from 'redux';
+
+const songsReducer = () => {
   return [
     { title: 'Jump', duration: '4:05' },
     { title: 'All Star', duration: '2:35' },
@@ -13,3 +15,9 @@ const selectedSongReducer = (selectedSong = null, action) => {
   }
   return selectedSong;
 };
+
+// now, any file in the project can the combined set of reducers
+export default combineReducers({
+  songs: songsReducer,
+  selectedSong: selectedSongReducer
+});
