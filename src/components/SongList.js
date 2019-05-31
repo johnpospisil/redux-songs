@@ -24,7 +24,7 @@ class SongList extends React.Component {
 // This function has this name by convention.
 // take the state object, run some computation on the data to make it appear as props
 const mapStateToProps = (state) => {
-  console.log(state);
+  // console.log(state);
   return { songs: state.songs };
 }
 
